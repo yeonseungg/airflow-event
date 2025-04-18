@@ -16,10 +16,7 @@ TARGET_FILE = DATA_DIR / "test.json"
 
 
 def build_url() -> str:
-    """
-    분(minute)+1 → 1~60 범위 값으로 URL 생성
-    11:30 → 31, 12:00 → 1
-    """
+
     minute_plus = (datetime.now().minute + 1) % 60 or 60
     return f"https://jsonplaceholder.typicode.com/todos/{minute_plus}"
 
