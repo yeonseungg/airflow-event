@@ -50,8 +50,8 @@ with DAG(
     description="5분마다 JSONPlaceholder TODO 수집 후 test.json 저장",
     default_args=default_args,
     start_date=days_ago(1),
-    schedule_interval="*/5 * * * *",  # 5분 간격
-    catchup=False,                     # 과거 실행분은 무시
+    schedule_interval="*/5 * * * *", 
+    catchup=False,                    
     tags=["exam", "github-trigger"],
 ) as dag:
 
